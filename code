@@ -1,0 +1,71 @@
+#include <Wire.h>
+#include "MAX30100_PulseOximeter.h"
+PulseOximeter pox;
+// Pins
+int smokePin = A0;
+int pirPin   = 2;
+int smokeLED  = 3;
+int motionLED = 4;
+void setup() {
+  pinMode(pirPin, INPUT);
+  pinMode(smokeLED, OUTPUT);
+  pinMode(motionLED, OUTPUT);
+  Serial.begin(9600);
+  if (!pox.begin()) {
+    Serial.println("MAX30100 not found");
+    while (1);
+  }
+}
+void loop() {
+  pox.update();
+  float heartRate = pox.getHeartRate();
+  int smoke = analogRead(smokePin);
+  int motion = digitalRead(pirPin);
+  Serial.print("Smoke: ");
+  Serial.print(smoke);
+  Serial.print(" | Motion: ");
+  Serial.print(motion);
+  Serial.print(" | HR: ");
+  Serial.println(heartRate);
+  // Smoke → Blink RED LED
+  if (smoke > 300) {
+    digitalWrite(smokeLED, HIGH);
+    digitalWrite(motionLED, LOW);
+    delay(300);
+    digitalWrite(smokeLED, LOW);
+    delay(300);
+    Serial.println("FIRE ALERT");
+  }
+  //  Emergency (low HR + no motion)
+  else if (heartRate > 0 && heartRate < 60 && motion == LOW) {
+    digitalWrite(smokeLED, HIGH);
+    digitalWrite(motionLED, HIGH);
+    Serial.println("EMERGENCY");
+    delay(300);
+  }
+  //  Motion → Green LED ON
+  else if (motion == HIGH) {
+    digitalWrite(smokeLED, LOW);
+    digitalWrite(motionLED, HIGH);
+    Serial.println("MOTION DETECTED");
+    delay(300);
+  }
+  //  Low Heart Rate → Blink Green LED
+  else if (heartRate > 0 && heartRate < 60) {
+    digitalWrite(smokeLED, LOW);
+    digitalWrite(motionLED, HIGH);
+    delay(300);
+    digitalWrite(motionLED, LOW);
+    delay(300);
+    Serial.println("LOW HEART RATE");
+  }
+
+  // Safe
+  else {
+    digitalWrite(smokeLED, LOW);
+    digitalWrite(motionLED, LOW);
+    Serial.println("SAFE");
+    delay(300);
+  }
+}
+
