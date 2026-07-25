@@ -2,7 +2,6 @@
 
 An intelligent IoT-based monitoring system that provides **real-time health monitoring**, **fire detection**, and **motion detection** to improve safety and emergency response. The system continuously monitors environmental and health parameters using sensors and sends alerts whenever abnormal conditions are detected.
 
----
 
 ## 📌 Project Overview
 
@@ -17,7 +16,7 @@ The system continuously monitors:
 
 When any abnormal condition is detected, the system immediately triggers alerts through alarms and IoT notifications, enabling quick action during emergencies.
 
----
+
 
 ## 🎯 Objectives
 
@@ -27,7 +26,7 @@ When any abnormal condition is detected, the system immediately triggers alerts 
 - Generate instant alerts during emergencies.
 - Improve safety using IoT technology.
 
----
+
 
 ## ✨ Features
 
@@ -42,7 +41,7 @@ When any abnormal condition is detected, the system immediately triggers alerts 
 - ✅ Easy Installation
 - ✅ Cost-Effective Solution
 
----
+
 
 ## 🛠 Technologies Used
 
@@ -64,7 +63,6 @@ When any abnormal condition is detected, the system immediately triggers alerts 
 - IoT Platform (ThingSpeak / Blynk / Firebase)
 - Serial Monitor
 
----
 
 ## 📂 Project Structure
 
@@ -79,7 +77,7 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 ├── README.md
 ```
 
----
+
 
 ## ⚙️ System Workflow
 
@@ -93,7 +91,7 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 5. Notifications are sent through the IoT platform.
 6. Local buzzer activates for immediate warning.
 
----
+
 
 ## 🔥 Applications
 
@@ -106,7 +104,7 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 - Fire Safety Monitoring
 - Healthcare Monitoring
 
----
+
 
 ## 📊 Advantages
 
@@ -118,7 +116,7 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 - Easy maintenance
 - Scalable architecture
 
----
+
 
 ## 🚀 Future Enhancements
 
@@ -130,7 +128,7 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 - Voice assistant integration
 - Camera-based monitoring
 
----
+
 
 ## 👨‍💻 Author
 
@@ -139,4 +137,3 @@ IOT-BASED-SMART-HEALTH-AND-FIRE-SAFETY-MONITORING-SYSTEM-WITH-MOTION-DETECTION
 - GitHub: https://github.com/SuriyaPrabha-hub
 - LinkedIn: https://www.linkedin.com/in/suriya-prabha-m-14aa61346/
 
----
